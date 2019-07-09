@@ -4,4 +4,5 @@ from practice.views import *
 
 urlpatterns = [
     path('add_data', DataCreate.as_view()),
+    path('calc_data', DataCalc.as_view()),
 ]
