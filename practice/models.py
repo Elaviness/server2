@@ -2,10 +2,10 @@ from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
 class GeoData(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    GPSstring = models.CharField(max_length=70, default='')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    GPSstring = models.CharField(max_length=70, default='', null=True)
 
-    GPStime = models.BigIntegerField(default=0)
+    GPStime = models.BigIntegerField(default=0, null=True)
     GPSx = models.DecimalField(max_digits=8, decimal_places=4, default=0, null=True)
     GPSy = models.DecimalField(max_digits=8, decimal_places=4, default=0, null=True)
 
@@ -18,10 +18,10 @@ class GeoData(models.Model):
     GiroYZ = models.DecimalField(max_digits=8, decimal_places=4, default=0, null=True)
 
 class ForCallculations(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    GPSstring = models.CharField(max_length=70, default='')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    GPSstring = models.CharField(max_length=70, default='', null=True)
 
-    GPStime = models.BigIntegerField(default=0)
+    GPStime = models.BigIntegerField(default=0, null=True)
     GPSx = models.DecimalField(max_digits=8, decimal_places=4, default=0, null=True)
     GPSy = models.DecimalField(max_digits=8, decimal_places=4, default=0, null=True)
 
