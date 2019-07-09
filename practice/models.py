@@ -9,13 +9,13 @@ class GeoData(models.Model):
     GPSx = models.DecimalField(max_digits=8, decimal_places=4, default=0)
     GPSy = models.DecimalField(max_digits=8, decimal_places=4, default=0)
 
-    AccX = models.DecimalField(max_digits=10, decimal_places=5)
-    AccY = models.DecimalField(max_digits=10, decimal_places=5)
-    AccZ = models.DecimalField(max_digits=10, decimal_places=5)
+    AccX = models.DecimalField(max_digits=10, decimal_places=5, default=0)
+    AccY = models.DecimalField(max_digits=10, decimal_places=5, default=0)
+    AccZ = models.DecimalField(max_digits=10, decimal_places=5, default=0)
 
-    GiroXY = models.DecimalField(max_digits=8, decimal_places=4)
-    GiroXZ = models.DecimalField(max_digits=8, decimal_places=4)
-    GiroYZ = models.DecimalField(max_digits=8, decimal_places=4)
+    GiroXY = models.DecimalField(max_digits=8, decimal_places=4, default=0)
+    GiroXZ = models.DecimalField(max_digits=8, decimal_places=4, default=0)
+    GiroYZ = models.DecimalField(max_digits=8, decimal_places=4, default=0)
 
 class ForCallculations(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -25,16 +25,16 @@ class ForCallculations(models.Model):
     GPSx = models.DecimalField(max_digits=8, decimal_places=4, default=0)
     GPSy = models.DecimalField(max_digits=8, decimal_places=4, default=0)
 
-    AccX = models.DecimalField(max_digits=10, decimal_places=5)
-    AccY = models.DecimalField(max_digits=10, decimal_places=5)
-    AccZ = models.DecimalField(max_digits=10, decimal_places=5)
+    AccX = models.DecimalField(max_digits=10, decimal_places=5, default=0)
+    AccY = models.DecimalField(max_digits=10, decimal_places=5, default=0)
+    AccZ = models.DecimalField(max_digits=10, decimal_places=5, default=0)
 
-    GiroXY = models.DecimalField(max_digits=8, decimal_places=4)
-    GiroXZ = models.DecimalField(max_digits=8, decimal_places=4)
-    GiroYZ = models.DecimalField(max_digits=8, decimal_places=4)
+    GiroXY = models.DecimalField(max_digits=8, decimal_places=4, default=0)
+    GiroXZ = models.DecimalField(max_digits=8, decimal_places=4, default=0)
+    GiroYZ = models.DecimalField(max_digits=8, decimal_places=4, default=0)
 
-    Speed = models.DecimalField(max_digits=8, decimal_places=5)
-    AngAcc = models.DecimalField(max_digits=6, decimal_places=4)
+    Speed = models.DecimalField(max_digits=8, decimal_places=5, default=0)
+    AngAcc = models.DecimalField(max_digits=6, decimal_places=4, default=0)
     NumOvertake = models.BigIntegerField()
     SpeedType_Choices = (
         ('Lx', 'Низкая скорость'),
